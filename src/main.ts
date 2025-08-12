@@ -6,13 +6,12 @@ import type { OpenAPIObject } from '@nestjs/swagger';
 import { Logger } from '@nestjs/common';
 
 async function bootstrap(): Promise<void> {
-    const APP_DEFAULT_PORT = 3000;
     const app = await NestFactory.create(AppModule);
 
     const config = app.get(ConfigService);
     const logger = new Logger('NestApplication');
 
-    const PORT = config.get<number>('APP_PORT', APP_DEFAULT_PORT);
+    const PORT = config.get<number>('APP_PORT', 7000);
 
     const swaggerConfig = new DocumentBuilder()
         .setTitle('Auto test backend')

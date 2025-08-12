@@ -62,7 +62,7 @@ export default tseslint.config(
             '@typescript-eslint/no-magic-numbers': [
                 'error',
                 {
-                    ignore: [0, 1, -1], // Example valid numbers to ignore
+                    ignore: [0, 1, -1, 7000], // Example valid numbers to ignore, 7000 is for PORT
                     ignoreArrayIndexes: true, // Correctly specify this option
                     ignoreClassFieldInitialValues: true, // Correctly specify this option
                 },
