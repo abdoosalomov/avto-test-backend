@@ -18,7 +18,7 @@ async function bootstrap(): Promise<void> {
         .setDescription('Auto test backend API documentation')
         .build();
     const documentFactory = (): OpenAPIObject => SwaggerModule.createDocument(app, swaggerConfig);
-    SwaggerModule.setup('docs', app, documentFactory);
+    SwaggerModule.setup('api/docs', app, documentFactory);
 
     app.setGlobalPrefix('api');
 
